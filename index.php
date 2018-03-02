@@ -140,7 +140,7 @@ function processMessage($message) {
 }
 
 
-define('WEBHOOK_URL', 'https://api.telegram.org/bot455165886:AAHAgyULbcYjsh91jIQqlD34vYQ_eOh3U_4/');
+define('WEBHOOK_URL', 'https://cat-recycle-bot.herokuapp.com/index.php');
 
 if (php_sapi_name() == 'cli') {
   // if run from console, set or delete webhook
