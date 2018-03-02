@@ -140,7 +140,7 @@ function processMessage($message) {
 }
 
 
-define('WEBHOOK_URL', 'https://cat-recycle-bot.herokuapp.com/index.php');
+define('WEBHOOK_URL', 'https://cat-recycle-bot.herokuapp.com/');
 
 if (php_sapi_name() == 'cli') {
   // if run from console, set or delete webhook
