@@ -157,6 +157,8 @@ if (!$update) {
   exit;
 }
 
+echo CURLINFO_HTTP_CODE;
+
 if (isset($update["message"])) {
   processMessage($update["message"]);
 }
