@@ -153,10 +153,11 @@ $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 var_dump($update, $content);
 
-echo ''.$GLOBALS;
+var_dump($GLOBALS);
 
 if (!$update) {
-  // receive wrong update, must not happen
+	// receive wrong update, must not happen
+	apiRequest("sendMessage", array('chat_id' => $update["message"]['chat']['id'], "text" => 'Привет'));
   exit;
 }
 
