@@ -115,7 +115,7 @@ function apiRequestJson($method, $parameters) {
 }
 
 function processMessage($message) {
-echo 'processMessage';
+
   // process incoming message
   $message_id = $message['message_id'];
   $chat_id = $message['chat']['id'];
@@ -150,13 +150,10 @@ if (php_sapi_name() == 'cli') {
 }
 
 $content = file_get_contents("php://input");
-$update = json_decode($content, true);
-
-var_dump($update, $content);
+$update = json_decode($content, true, 5);
 
 if (!$update) {
 	// receive wrong update, must not happen
-	apiRequest("sendMessage", array('chat_id' => $update["message"]['chat']['id'], "text" => 'Привет'));
   exit;
 }
 
