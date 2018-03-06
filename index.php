@@ -1,6 +1,6 @@
 <?php
 
-echo CURLINFO_HTTP_CODE;
+echo 'Привет';
 
 define('BOT_TOKEN', '455165886:AAHAgyULbcYjsh91jIQqlD34vYQ_eOh3U_4');
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
