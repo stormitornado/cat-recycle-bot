@@ -149,7 +149,7 @@ if (php_sapi_name() == 'cli') {
   exit;
 }
 
-
+echo 'Hello';
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 echo $content;
