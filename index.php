@@ -116,16 +116,12 @@ function apiRequestJson($method, $parameters) {
 
 function processMessage($message) {
 
-	echo 'processMessage, ';
   // process incoming message
   $message_id = $message['message_id'];
   $chat_id = $message['chat']['id'];
   if (isset($message['text'])) {
 		// incoming text message
     $text = $message['text'];
-
-		echo 'message: ';
-		echo $text;
 
     if (strpos($text, "/start") === 0) {
       apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => 'Hello', 'reply_markup' => array(
