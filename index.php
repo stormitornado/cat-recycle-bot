@@ -1,8 +1,5 @@
 <?php
 
-echo CURLINFO_HTTP_CODE;
-echo 'CURLINFO_HTTP_CODE';
-
 define('BOT_TOKEN', '455165886:AAHAgyULbcYjsh91jIQqlD34vYQ_eOh3U_4');
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
 
@@ -118,6 +115,8 @@ function apiRequestJson($method, $parameters) {
 }
 
 function processMessage($message) {
+echo $message;
+echo '$message';
   // process incoming message
   $message_id = $message['message_id'];
   $chat_id = $message['chat']['id'];
