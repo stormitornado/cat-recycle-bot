@@ -152,8 +152,8 @@ if (php_sapi_name() == 'cli') {
 echo 'Hello';
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
-
-echo ''.$GLOBALS;
+var_dump($update, $content);
+echo \n;
 print_r($GLOBALS);
 
 if (!$update) {
