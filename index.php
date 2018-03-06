@@ -152,7 +152,7 @@ if (php_sapi_name() == 'cli') {
 echo 'Hello';
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
-echo $content;
+echo $update;
 echo '$content';
 if (!$update) {
   // receive wrong update, must not happen
