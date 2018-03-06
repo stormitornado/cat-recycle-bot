@@ -1,1 +1,1 @@
-web: index.php:443
+web: index.php
