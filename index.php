@@ -157,6 +157,8 @@ if (!$update) {
   exit;
 }
 
+echo isset($update["message"]);
+
 if (isset($update["message"])) {
   processMessage($update["message"]);
 }
