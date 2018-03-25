@@ -115,7 +115,7 @@ function apiRequestJson($method, $parameters) {
 }
 
 function processMessage($message) {
-
+echo $message;
   // process incoming message
   $message_id = $message['message_id'];
   $chat_id = $message['chat']['id'];
@@ -156,8 +156,6 @@ if (!$update) {
 	// receive wrong update, must not happen
   exit;
 }
-
-echo isset($update["message"]);
 
 if (isset($update["message"])) {
   processMessage($update["message"]);
